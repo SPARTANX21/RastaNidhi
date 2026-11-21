@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RastaNidhi — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/static/app.css">
+<link rel="stylesheet" href="/static/driftbar.css">
+<link rel="stylesheet" href="/static/map.css">
+</head>
+<body class="dash">
+
+<header class="topbar">
+  <a class="logo" href="/"><span class="brand__mark" aria-hidden="true"></span><span class="brand__word"><b>RastaNidhi</b><span class="brand__ticker" aria-hidden="true"><span><i>मुंबई · Mumbai</i><i>Follow the money</i><i>Verify the work</i><i>Monsoon roads, tracked</i><i>मुंबई · Mumbai</i></span></span></span></a>
+  <div class="top-right">
+    <span id="claude-chip" class="chip grey">⚪ Claude off</span>
+    <select id="lang" class="sel" title="Language for Claude reports">
+      <option>English</option><option>Marathi (मराठी)</option><option>Hindi (हिंदी)</option><option>Hinglish</option>
+    </select>
+    <span id="user-chip" class="chip"></span>
+    <button class="btn ghost small" onclick="logout()">Sign out</button>
+  </div>
+</header>
+
+<aside class="side">
+  <div class="who" id="who"></div>
+  <nav id="nav"></nav>
+  <div class="foot">All data is synthetic and contractors are fictional.<br>Claude Impact Lab Mumbai 2026</div>
+  <div class="side-meadow" aria-hidden="true"><span>RastaNidhi</span></div>
+</aside>
+
+<main id="view"><div class="loading">Loading…</div></main>
+
+<div class="modal-bg" id="modal-bg" onclick="if(event.target===this)closeModal()">
+  <div class="modal"><span class="x" onclick="closeModal()">×</span><div id="modal"></div></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="/static/map.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
